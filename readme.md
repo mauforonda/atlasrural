@@ -2,7 +2,7 @@
 
 > Una reproducción del mismo [trabajo que hice para manzanos](https://github.com/mauforonda/atlasurbano/), esta vez con comunidades en áreas dispersas.
 
-El [geoportal oficial](https://geoportal.ine.gob.bo/) de resultados censales permite consultar datos para cada comunidad. En este repositorio descargo estos datos y construyo un mapa para observar patrones espaciales desde ellos.
+El [geoportal oficial](https://idg.ine.gob.bo/) de resultados censales permite consultar datos para cada comunidad. En este repositorio descargo estos datos y construyo un mapa para observar patrones espaciales desde ellos.
 
 Podemos consultar el número de personas y viviendas para cada comunidad, pero el INE sólo nos permite descargar más información en casos donde hayan suficientes personas, por razones de privacidad.
 
@@ -16,18 +16,14 @@ Ofrezco 3 conjuntos de datos:
 
 [fichas.parquet](datos/fichas.parquet): un parquet con la ficha completa para comunidades donde es posible descargarla.
 
-Puedes consultar [el pdf de esta ficha](recursos/ficha_ejemplo.pdf) para comprender qué representa cada valor.
-
 ## Descarga
 
 Para construir estos datos, escribí 2 cuadernos:
 
-- [Descarga de polígonos](descarga_poligonos.ipynb)
-- [Descarga de datos](armando_manzanero.ipynb)
+- [Descarga de polígonos](descargar_comunidades.py)
+- [Descarga de datos](descargar_fichas.py)
 
 Estos cuadernos dependen de [un listado de municipios](recursos/municipios.csv) y [un diccionario de los campos en cada ficha](recursos/campos.json).
-
-Mientras el geoportal no cambie mucho, debería ser posible volver a correr este código para reproducir los valores en este repositorio (sin embargo, la descarga de datos podría tomar varios días).
 
 🌱
 
